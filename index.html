@@ -1,14 +1,328 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html class="light" lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>THE GAZETTE | The Heritage Standard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;700;800&amp;family=Source+Serif+4:ital,wght@0,400;0,700;1,400&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e6e1df",
+                        "secondary-fixed-dim": "#99ccfa",
+                        "tertiary-container": "#1c1b1a",
+                        "on-background": "#1b1c1c",
+                        "surface-container-high": "#e9e8e7",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "inverse-primary": "#c8c6c5",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "paper-white": "#FFFFFF",
+                        "secondary-fixed": "#cce5ff",
+                        "surface-container-highest": "#e3e2e2",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "border-gray": "#EBEBEB",
+                        "surface-dim": "#dbdad9",
+                        "inverse-on-surface": "#f2f0f0",
+                        "secondary-container": "#9fd1ff",
+                        "on-secondary-fixed": "#001d31",
+                        "on-tertiary-container": "#868381",
+                        "surface-variant": "#e3e2e2",
+                        "on-primary": "#ffffff",
+                        "surface": "#fbf9f9",
+                        "surface-bright": "#fbf9f9",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "primary-fixed": "#e5e2e1",
+                        "primary": "#000000",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-primary-fixed-variant": "#474646",
+                        "inverse-surface": "#303031",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "tertiary": "#000000",
+                        "on-tertiary-fixed": "#1c1b1a",
+                        "on-secondary-container": "#215a82",
+                        "breaking-red": "#D0021B",
+                        "surface-tint": "#5f5e5e",
+                        "tertiary-fixed-dim": "#cac6c3",
+                        "primary-container": "#1c1b1b",
+                        "outline": "#747878",
+                        "on-secondary-fixed-variant": "#064b72",
+                        "on-primary-container": "#858383",
+                        "error-container": "#ffdad6",
+                        "background": "#fbf9f9",
+                        "surface-container": "#efeded",
+                        "error": "#ba1a1a",
+                        "rule-black": "#000000",
+                        "secondary": "#2c638b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "margin-edge": "16px",
+                        "hairline": "1px",
+                        "gutter": "20px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "stack-xl": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Source Serif 4"],
+                        "display-lg": ["Source Serif 4"],
+                        "headline-lg": ["Source Serif 4"],
+                        "headline-md": ["Source Serif 4"],
+                        "label-sm": ["Libre Franklin"],
+                        "label-lg": ["Libre Franklin"],
+                        "label-md": ["Libre Franklin"],
+                        "body-md": ["Source Serif 4"],
+                        "headline-xl": ["Source Serif 4"],
+                        "headline-xl-mobile": ["Source Serif 4"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {
+                            "lineHeight": "28px",
+                            "fontWeight": "400"
+                        }],
+                        "display-lg": ["48px", {
+                            "lineHeight": "52px",
+                            "letterSpacing": "-0.02em",
+                            "fontWeight": "700"
+                        }],
+                        "headline-lg": ["28px", {
+                            "lineHeight": "32px",
+                            "fontWeight": "700"
+                        }],
+                        "headline-md": ["22px", {
+                            "lineHeight": "26px",
+                            "fontWeight": "700"
+                        }],
+                        "label-sm": ["11px", {
+                            "lineHeight": "12px",
+                            "fontWeight": "400"
+                        }],
+                        "label-lg": ["14px", {
+                            "lineHeight": "16px",
+                            "letterSpacing": "0.05em",
+                            "fontWeight": "700"
+                        }],
+                        "label-md": ["12px", {
+                            "lineHeight": "14px",
+                            "fontWeight": "500"
+                        }],
+                        "body-md": ["16px", {
+                            "lineHeight": "24px",
+                            "fontWeight": "400"
+                        }],
+                        "headline-xl": ["34px", {
+                            "lineHeight": "38px",
+                            "letterSpacing": "-0.01em",
+                            "fontWeight": "700"
+                        }],
+                        "headline-xl-mobile": ["30px", {
+                            "lineHeight": "34px",
+                            "fontWeight": "700"
+                        }]
+                    }
+                },
+            },
+        }
+    </script>
 </head>
-<body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+<body class="bg-background text-on-background min-h-screen selection:bg-secondary-container">
+    <!-- TopAppBar -->
+    <header class="bg-background fixed top-0 w-full z-[100] border-b border-gray flex flex-col px-margin-edge">
+        <div class="flex items-center justify-between py-stack-sm h-14">
+            <button class="p-2 -ml-2 transition-opacity duration-150 active:opacity-70">
+                <span class="material-symbols-outlined text-primary">menu</span>
+            </button>
+            <h1 class="font-headline-xl-mobile text-headline-xl-mobile uppercase tracking-tighter text-rule-black">THE GAZETTE</h1>
+            <button class="bg-primary text-on-primary px-4 py-1 font-label-lg text-label-lg transition-opacity duration-150 active:opacity-70">SUBSCRIBE</button>
+        </div>
+    </header>
+    <!-- Section Navigation -->
+    <nav class="fixed top-14 w-full bg-background border-b border-gray z-[90] overflow-x-auto no-scrollbar">
+        <div class="flex whitespace-nowrap px-margin-edge gap-gutter py-3">
+            <a class="font-label-lg text-label-lg text-primary border-b-2 border-primary hover:underline decoration-1" href="#">Home</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:underline decoration-1" href="#">World</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:underline decoration-1" href="#">U.S.</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:underline decoration-1" href="#">Politics</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:underline decoration-1" href="#">Economy</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:underline decoration-1" href="#">Technology</a>
+            <a class="font-label-lg text-label-lg text-on-surface-variant hover:underline decoration-1" href="#">Opinion</a>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <main class="mt-[104px] pb-20">
+        <!-- Live Updates Section -->
+        <section class="border-b border-gray">
+            <div class="flex items-start gap-4 px-margin-edge py-3">
+                <span class="font-label-lg text-label-lg text-breaking-red font-bold flex items-center gap-1 shrink-0">
+<span class="w-2 h-2 bg-breaking-red rounded-full animate-pulse"></span>
+                    LIVE
+                </span>
+                <div class="flex flex-col gap-2 overflow-hidden">
+                    <div class="border-l border-gray pl-3">
+                        <p class="font-label-md text-label-md text-on-surface-variant">Trump Administration · 9:30 p.m. ET</p>
+                        <p class="font-body-md text-body-md leading-tight line-clamp-1 font-bold">New policies for the $1.8 Billion Fund spark legal expert scrutiny.</p>
+                    </div>
+                    <div class="border-l border-gray pl-3">
+                        <p class="font-label-md text-label-md text-on-surface-variant">NBA Western Conference Finals</p>
+                        <p class="font-body-md text-body-md leading-tight line-clamp-1">Spurs and Thunder meet in Game 2 after thrilling series opener.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Top Stories (Hero) -->
+        <section class="px-margin-edge py-stack-md border-b border-gray">
+            <article class="flex flex-col gap-stack-sm">
+                <h2 class="font-headline-xl-mobile text-headline-xl-mobile leading-tight">Trump’s $1.8 Billion Fund Appears to Violate Administration’s Own Policies</h2>
+                <p class="font-body-lg text-body-lg text-on-surface-variant">The fund that could offer payouts to Trump allies seems to contradict a policy instituted under former Attorney General Pam Bondi.</p>
+                <div class="flex items-center gap-2 mb-2">
+                    <span class="font-label-sm text-label-sm uppercase tracking-widest bg-rule-black text-paper-white px-2 py-0.5">Analysis</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">6 min read</span>
+                </div>
+                <img alt="Government building exterior" class="w-full aspect-[16/9] object-cover grayscale brightness-90" data-alt="A low-angle, powerful architectural photograph of a grand government building with massive stone columns and intricate facades. The image is captured in a high-contrast black and white style, emphasizing sharp shadows and brilliant highlights against a clear, dramatic sky. The lighting is harsh and direct, creating a sense of weight, authority, and classical gravitas consistent with a prestige journalism aesthetic."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7uiQh7JpMhHtJJZBX8VQVM0iycktRMJmYO43I02zjWRl7Pxvl9jseo813A60nMYHO3aS3c3_6opyQOadMDjUmn90XefRGUlptYK3KC3zV0toP9y-KJMWAe_yaZ3d26wNK3L4gcJm56PIDohqBn5YMQ7OctibLPNg6a3_NSKAGrWmxid4z4qpD8U3K6GdCPBfx2RAtsKkzDqWCooHAsIIfLDYBwQqskjs4Cj-hNvGQBok2FDEJ5hCaDjuBr1Y7V9L6U8rezG1DOCoQ" />
+                <p class="font-label-md text-label-md text-on-surface-variant italic py-1 border-b border-gray">Eric Lee / The New York Times</p>
+            </article>
+        </section>
+        <!-- Secondary Top Story -->
+        <section class="px-margin-edge py-stack-md border-b border-gray">
+            <article class="flex flex-col gap-2">
+                <h3 class="font-headline-lg text-headline-lg-mobile leading-tight">Trump’s Government Moves to Spare an Unhappy Taxpayer Named Trump</h3>
+                <p class="font-body-md text-body-md line-clamp-3">No president has ever used the government to advance his own personal interests and those of his family and allies as expansively as President Trump.</p>
+                <p class="font-label-sm text-label-sm text-on-surface-variant">7 min read</p>
+            </article>
+        </section>
+        <!-- Analysis Grouped Section -->
+        <section class="bg-surface-container-low py-stack-md">
+            <div class="px-margin-edge border-t-2 border-primary pt-2 mb-4">
+                <h4 class="font-label-lg text-label-lg uppercase tracking-wider">Analysis</h4>
+            </div>
+            <div class="flex flex-col gap-0 divide-y divide-gray">
+                <article class="px-margin-edge py-4">
+                    <h3 class="font-headline-md text-headline-md leading-tight mb-2">Trump Gets His Payback, but It Comes at a Cost in Congress</h3>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant">5 min read</p>
+                </article>
+                <article class="px-margin-edge py-4">
+                    <h3 class="font-headline-md text-headline-md leading-tight mb-2">The Truth About E. Jean Carroll</h3>
+                    <p class="font-label-sm text-label-sm text-on-surface-variant">5 min read</p>
+                </article>
+            </div>
+        </section>
+        <!-- Crisis in Cuba Section -->
+        <section class="px-margin-edge py-stack-md border-b-4 border-primary">
+            <div class="mb-4">
+                <span class="font-label-lg text-label-lg uppercase text-breaking-red">Crisis in Cuba</span>
+                <h2 class="font-headline-xl-mobile text-headline-xl-mobile leading-tight mt-1">U.S. Charges Raúl Castro With Murder in Downing of Planes</h2>
+            </div>
+            <div class="grid grid-cols-1 gap-stack-md">
+                <img alt="Havana landscape" class="w-full aspect-video object-cover grayscale brightness-75" data-alt="A cinematic wide shot of a weathered Havana street scene, featuring vintage cars and sun-drenched colonial architecture. The photograph is processed in a grainy, high-contrast black and white editorial style, with deep shadows emphasizing the urban decay and historical persistence. The atmosphere is tense and atmospheric, with sharp, directional sunlight creating dramatic patterns across the pavement."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxMI3mUXGgW6o4eqohR8_zOlig7p_FufqIdsUAHFHqrfEQDp0T7T8nqwFLoA-k4CmGyoD7GVKbk4p-W0w20TY9Cgl5ymJM_M_ZtkSWz_pp1R1vv-0ZKQT_JWtOU2O82Px8iu6ggJwRwvNwi2WZwo3imjHzswX8EPM0nTimJE_5VBJGw57AcH5Yx-pPTk01v5Hfmw8eOBSxqEZemMi5XOX8VuMRXpnbYvtjqoE0WmS_8ZSkrRVSq6VqllS8mzEM3YMkQge7AVhCqWSq"
+                />
+                <div class="flex flex-col gap-3">
+                    <a class="flex justify-between items-center py-2 border-b border-gray" href="#">
+                        <span class="font-body-md text-body-md font-bold underline decoration-hairline">Raúl Castro’s Power</span>
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    </a>
+                    <a class="flex justify-between items-center py-2 border-b border-gray" href="#">
+                        <span class="font-body-md text-body-md font-bold underline decoration-hairline">Pressure Campaign</span>
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    </a>
+                    <a class="flex justify-between items-center py-2 border-b border-gray" href="#">
+                        <span class="font-body-md text-body-md font-bold underline decoration-hairline">Out of Oil</span>
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    </a>
+                    <a class="flex justify-between items-center py-2 border-b border-gray" href="#">
+                        <span class="font-body-md text-body-md font-bold underline decoration-hairline">Who Controls the Economy?</span>
+                        <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Most Popular / Latest List -->
+        <section class="px-margin-edge py-stack-lg">
+            <div class="border-b-2 border-rule-black mb-stack-md pb-1">
+                <h3 class="font-label-lg text-label-lg uppercase">The Latest</h3>
+            </div>
+            <div class="flex flex-col gap-6">
+                <article class="flex gap-4">
+                    <span class="font-headline-lg text-headline-lg text-gray shrink-0 leading-none">01</span>
+                    <div class="flex flex-col gap-1">
+                        <h4 class="font-headline-md text-headline-md leading-tight">Musk’s SpaceX Reveals Its Finances for the First Time</h4>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">5 min read</p>
+                    </div>
+                </article>
+                <article class="flex gap-4">
+                    <span class="font-headline-lg text-headline-lg text-gray shrink-0 leading-none">02</span>
+                    <div class="flex flex-col gap-1">
+                        <h4 class="font-headline-md text-headline-md leading-tight">OpenAI Prepares to File to Go Public in Coming Weeks</h4>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">4 min read</p>
+                    </div>
+                </article>
+                <article class="flex gap-4">
+                    <span class="font-headline-lg text-headline-lg text-gray shrink-0 leading-none">03</span>
+                    <div class="flex flex-col gap-1">
+                        <h4 class="font-headline-md text-headline-md leading-tight">Senate G.O.P. Appears Ready to Drop Ballroom Funds</h4>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">3 min read</p>
+                    </div>
+                </article>
+                <article class="flex gap-4">
+                    <span class="font-headline-lg text-headline-lg text-gray shrink-0 leading-none">04</span>
+                    <div class="flex flex-col gap-1">
+                        <h4 class="font-headline-md text-headline-md leading-tight">Nvidia’s Profit Hits $58.3 Billion as A.I. Boom Gathers Steam</h4>
+                        <p class="font-label-sm text-label-sm text-on-surface-variant">4 min read</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <!-- BottomNavBar -->
+    <nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-16 bg-background border-t border-gray">
+        <a class="flex flex-col items-center gap-1 text-primary dark:text-inverse-primary font-bold scale-95 duration-75" href="#">
+            <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="font-label-sm text-label-sm">Home</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-on-surface-variant dark:text-outline-variant opacity-80" href="#">
+            <span class="material-symbols-outlined">sensors</span>
+            <span class="font-label-sm text-label-sm">Live</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-on-surface-variant dark:text-outline-variant opacity-80" href="#">
+            <span class="material-symbols-outlined">bookmark</span>
+            <span class="font-label-sm text-label-sm">Saved</span>
+        </a>
+        <a class="flex flex-col items-center gap-1 text-on-surface-variant dark:text-outline-variant opacity-80" href="#">
+            <span class="material-symbols-outlined">person</span>
+            <span class="font-label-sm text-label-sm">Profile</span>
+        </a>
+    </nav>
+    <!-- Footer -->
+    <footer class="w-full px-margin-edge py-stack-lg flex flex-col gap-stack-md bg-surface-container-low border-t-4 border-primary pb-24">
+        <h2 class="font-headline-md text-headline-md uppercase tracking-tighter">THE GAZETTE</h2>
+        <div class="grid grid-cols-2 gap-y-4">
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#">Privacy Policy</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#">Terms of Service</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#">Site Map</a>
+            <a class="font-label-md text-label-md text-on-surface-variant hover:text-primary" href="#">Contact Us</a>
+        </div>
+        <p class="font-label-md text-label-md text-on-tertiary-container mt-4">© 2024 Heritage Journalism Corp. All rights reserved.</p>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>
